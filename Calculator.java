@@ -2,7 +2,6 @@ package simple_calculator;
 
 import java.util.Scanner;
 
-
 public class Calculator{
 
     public static void main(String[] args) {
@@ -31,7 +30,7 @@ public class Calculator{
 
         System.out.println("Enter second number: ");
         double n2 = scan.nextDouble();
-
+        System.out.println();
         System.out.println(runOperation(user, n1, n2));
         scan.close();
 
@@ -43,20 +42,25 @@ public class Calculator{
       double result = 0.0;
       switch(user){
         case 1:
-            System.out.println("Addition: ");
+            System.out.print(n1 + " + " + n2 + " = ");
             result = n1 + n2;
             break;
         case 2:
-        System.out.println("Subtraction: ");
+        System.out.print(n1 + " - " + n2 + " = ");
             result = n1 - n2;
             break;
         case 3: 
-            System.out.println("Multiplicaton: ");
+            System.out.print(n1 + " * " + n2 + " = ");
             result = n1 * n2;
             break;
         case 4:
-            System.out.println("Division: ");
-            result = n1/n2;
+            if(n2!=0){
+                System.out.print(n1 + " / " + n2 + " = ");
+                result = n1/n2;
+            }
+            else{
+                System.out.println("Error: cannot divide by 0!");
+            }
             break;
 
       }
