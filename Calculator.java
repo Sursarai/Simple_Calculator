@@ -25,7 +25,8 @@ public class Calculator{
             }
         } while(!valid);
        
-        
+
+        scan.close();
 
         
 
